@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/ui/Card.astro';
+import Button from '../components/ui/Button.astro';
+const features = [
+  { icon: '🧠', title: 'Análisis semántico', desc: 'Detección de lenguaje artificial y reseñas falsas con NLP avanzado.' },
+  { icon: '🔍', title: 'Detección de campañas', desc: 'Agrupación automática de reseñas coordinadas por IP, hora y similitud.' },
+  { icon: '🛡️', title: 'Ética y control', desc: 'Revisión humana obligatoria para evitar falsos positivos.' },
+];
+---
+<Layout title="Protege tu e-commerce">
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 -z-10"></div>
+    <div class="max-w-6xl mx-auto px-4 py-20 md:py-32 text-center animate-fade-in">
+      <h1 class="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        Detecta manipulación de reseñas con IA
+      </h1>
+      <p class="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
+        MarketPlus confía en ReviewGuard para identificar reseñas falsas y campañas coordinadas antes de que dañen su reputación.
+      </p>
+      <div class="mt-10 flex gap-4 justify-center flex-wrap">
+        <a href="/register" class="btn-primary text-lg px-8 py-3 shadow-lg hover:shadow-xl transition">Comenzar ahora</a>
+        <a href="#features" class="btn-secondary text-lg px-8 py-3">Conocer más</a>
+      </div>
+    </div>
+  </section>
+  <section id="features" class="py-16 bg-white/50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Características principales</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        {features.map(f => (
+          <Card class="text-center hover:-translate-y-1 transition duration-300">
+            <div class="text-5xl mb-4">{f.icon}</div>
+            <h3 class="text-xl font-semibold">{f.title}</h3>
+            <p class="text-gray-600 mt-2">{f.desc}</p>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4">¿Listo para proteger tu plataforma?</h2>
+      <a href="/register" class="btn-primary">Solicitar demo</a>
+    </div>
+  </section>
+</Layout>

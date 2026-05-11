@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LoginForm from '../components/auth/LoginForm.jsx';
+---
+<Layout title="Iniciar sesión">
+  <div class="min-h-[80vh] flex items-center justify-center">
+    <LoginForm client:load />
+  </div>
+</Layout>

@@ -1,0 +1,6 @@
+---
+const { level = 'bajo' } = Astro.props; // bajo, medio, alto
+---
+<span class={`badge-${level}`}>
+  <slot />
+</span>

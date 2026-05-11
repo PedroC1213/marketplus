@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ReviewDetail from '../../components/reviews/ReviewDetail.jsx';
+export async function getStaticPaths() {
+  // Para generación estática (puedes ampliar)
+  return [{ params: { id: '1' } }, { params: { id: '2' } }, { params: { id: '3' } }, { params: { id: '4' } }];
+}
+const { id } = Astro.params;
+---
+<Layout title={`Reseña #${id}`}>
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <ReviewDetail reviewId={id} client:only="react" />
+  </div>
+</Layout>

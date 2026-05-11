@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-slate-50 to-gray-100 text-gray-800;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1 {
+    @apply text-3xl font-extrabold tracking-tight;
+  }
+  h2 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+  a {
+    @apply transition duration-200;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md rounded-2xl shadow-lg border border-white/30;
+  }
+  .glass-card-dark {
+    @apply bg-gray-900/80 backdrop-blur-md rounded-2xl shadow-lg border border-gray-800;
+  }
+  .btn-primary {
+    @apply px-4 py-2 bg-primary text-white rounded-xl hover:bg-primary/90 transition transform hover:scale-105 focus:ring-2 focus:ring-primary/50 shadow-sm;
+  }
+  .btn-secondary {
+    @apply px-4 py-2 border border-primary text-primary rounded-xl hover:bg-primary/10 transition;
+  }
+  .btn-danger {
+    @apply px-4 py-2 bg-danger text-white rounded-xl hover:bg-danger/90 transition;
+  }
+  .badge-bajo {
+    @apply px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800;
+  }
+  .badge-medio {
+    @apply px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800;
+  }
+  .badge-alto {
+    @apply px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800;
+  }
+}
