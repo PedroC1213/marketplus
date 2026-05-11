@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RegisterForm from '../components/auth/RegisterForm.jsx';
+---
+<Layout title="Registro">
+  <div class="min-h-[80vh] flex items-center justify-center">
+    <RegisterForm client:load />
+  </div>
+</Layout>

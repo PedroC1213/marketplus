@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/layout/Sidebar.astro';
+import CampaignsList from '../components/campaigns/CampaignsList.jsx';
+---
+<Layout title="Campañas detectadas">
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="flex flex-col md:flex-row gap-6">
+      <aside class="md:w-64"><Sidebar /></aside>
+      <main class="flex-1">
+        <h1 class="text-2xl font-bold mb-4">Campañas coordinadas</h1>
+        <CampaignsList client:only="react" />
+      </main>
+    </div>
+  </div>
+</Layout>

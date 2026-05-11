@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Sidebar from '../../components/layout/Sidebar.astro';
+import ReviewsTable from '../../components/reviews/ReviewsTable.jsx';
+---
+<Layout title="Gestión de reseñas">
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="flex flex-col md:flex-row gap-6">
+      <aside class="md:w-64"><Sidebar /></aside>
+      <main class="flex-1">
+        <h1 class="text-2xl font-bold mb-4">Reseñas con riesgo detectado</h1>
+        <ReviewsTable client:only="react" />
+      </main>
+    </div>
+  </div>
+</Layout>
